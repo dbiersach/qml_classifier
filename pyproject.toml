@@ -1,0 +1,35 @@
+[project]
+name = "qml-classifier"
+version = "0.1.0"
+description = "Encoding Strategies for Quantum Machine Learning Classification"
+readme = "README.md"
+
+requires-python = ">=3.13,<3.14"
+
+# Minimal dependency set needed to run the seven encoding notebooks.
+dependencies = [
+    "ipykernel",
+    "ipython",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pylatexenc",
+    "qiskit",
+    "qiskit-aer",
+    "qiskit-machine-learning",
+    "scikit-learn",
+    "ruff",
+]
+
+[tool.uv]
+# This is a "virtual" project: there is no package to build. The helper module
+# qml_utils.py sits beside the notebooks and is imported directly, so no
+# editable install or build backend is required.
+package = false
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+lint.extend-select = ["I", "C4", "ISC", "SIM", "TCH"]
+lint.ignore = []
+show-fixes = true
+target-version = "py313"
