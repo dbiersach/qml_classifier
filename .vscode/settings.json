@@ -1,29 +1,71 @@
 {
-    // Use Ruff as the formatter and import organizer for Python files and
-    // notebooks. These settings live in .vscode/settings.json so they apply
-    // whether the project is opened as a folder or via the .code-workspace file.
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
+    // Mirror of the qis101 workspace settings so that opening this project as a
+    // FOLDER behaves exactly like the qis101 workspace (Ruff organize-imports,
+    // format on save, autosave, and the same quiet Pylance diagnostics). These
+    // also apply when opening qml_classifier.code-workspace.
+    "chat.editor.fontSize": 18,
+    "chat.fontSize": 18,
+    "debug.terminal.clearBeforeReusing": false,
     "editor.codeActionsOnSave": {
-        "source.organizeImports.ruff": "explicit",
-        "source.fixAll.ruff": "explicit"
+        "source.organizeImports.ruff": "explicit"
     },
-
-    // Python-specific (redundant with the above but explicit and safe)
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.codeActionsOnSave": {
-            "source.organizeImports.ruff": "explicit",
-            "source.fixAll.ruff": "explicit"
-        }
-    },
-
-    // Jupyter notebooks: organize imports and auto-fix per cell on save, and
-    // register the Ruff code actions so "Ctrl + ." offers the import fix.
-    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.fontSize": 18,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.unusualLineTerminators": "prompt",
+    "files.autoSave": "afterDelay",
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "notebook.formatOnCellExecution": true,
     "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {
-        "notebook.source.organizeImports": "explicit",
-        "notebook.source.fixAll": "explicit"
+    "notebook.markup.fontSize": 18,
+    "output.smartScroll.enabled": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportArgumentType": "none",
+        "reportAssignmentType": "none",
+        "reportAttributeAccessIssue": "none",
+        "reportCallIssue": "none",
+        "reportImplicitStringConcatenation": "none",
+        "reportIndexIssue": "none",
+        "reportMissingImports": "none",
+        "reportMissingModuleSource": "none",
+        "reportMissingParameterType": "none",
+        "reportMissingTypeStubs": "none",
+        "reportOptionalMemberAccess": "none",
+        "reportPrivateImportUsage": "none",
+        "reportUnknownArgumentType": "none",
+        "reportUnknownMemberType": "none",
+        "reportUnknownParameterType": "none",
+        "reportUntypedFunctionDecorator": "none",
+        "reportUnusedVariable": "none"
+    },
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.stubPath": "",
+    "python.analysis.typeCheckingMode": "standard",
+    "python.defaultInterpreterPath": "",
+    "python.experiments.optOutFrom": [
+        "pythonTerminalEnvVarActivation"
+    ],
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.executeInFileDir": false,
+    "python.terminal.shellIntegration.enabled": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.env.linux": {
+        "QT_QPA_PLATFORM": "xcb"
+    },
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.hideOnStartup": "always",
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#3cff00",
+        "tab.unfocusedActiveBorder": "#000000"
     }
 }
