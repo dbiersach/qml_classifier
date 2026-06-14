@@ -1,7 +1,5 @@
 # Encoding Strategies for Quantum Machine Learning Classification
 
-**Student:** Christian Giordano
-
 A standalone workspace for a comparative study of three quantum feature-encoding
 strategies (angle encoding, amplitude encoding, and ZZ feature map encoding)
 inside variational quantum classifiers (VQCs), measured against a classical
