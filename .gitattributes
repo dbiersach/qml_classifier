@@ -1,0 +1,31 @@
+# Standardize line endings across platforms.
+# Text files are stored with LF in the repository and checked out with LF,
+# which stops the "LF will be replaced by CRLF" warnings on Windows.
+* text=auto eol=lf
+
+# Be explicit for the file types in this project
+*.py    text eol=lf
+*.ipynb text eol=lf
+*.md    text eol=lf
+*.toml  text eol=lf
+*.json  text eol=lf
+*.lock  text eol=lf
+*.txt   text eol=lf
+*.cfg   text eol=lf
+*.code-workspace text eol=lf
+.gitignore       text eol=lf
+.gitattributes   text eol=lf
+.python-version  text eol=lf
+
+# Windows-only scripts should keep CRLF if any are ever added
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Treat common binary assets as binary (no EOL conversion)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
