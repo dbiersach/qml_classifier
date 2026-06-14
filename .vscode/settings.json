@@ -1,0 +1,29 @@
+{
+    // Use Ruff as the formatter and import organizer for Python files and
+    // notebooks. These settings live in .vscode/settings.json so they apply
+    // whether the project is opened as a folder or via the .code-workspace file.
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.ruff": "explicit",
+        "source.fixAll.ruff": "explicit"
+    },
+
+    // Python-specific (redundant with the above but explicit and safe)
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "explicit",
+            "source.fixAll.ruff": "explicit"
+        }
+    },
+
+    // Jupyter notebooks: organize imports and auto-fix per cell on save, and
+    // register the Ruff code actions so "Ctrl + ." offers the import fix.
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.organizeImports": "explicit",
+        "notebook.source.fixAll": "explicit"
+    }
+}
